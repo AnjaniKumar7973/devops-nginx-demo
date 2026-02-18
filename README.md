@@ -13,3 +13,5 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 
 webpage is kept at /bar/www/iginx
+
+hello all

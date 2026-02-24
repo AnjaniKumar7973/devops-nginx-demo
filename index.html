@@ -1,125 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Anjani Kumar | DevOps Engineer</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: white;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anjani Kumar | DevOps Engineer</title>
 
-        header {
-            background: #1e293b;
-            padding: 20px;
-            text-align: center;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
 
-        header p {
-            margin: 5px 0;
-            color: #94a3b8;
-        }
+body{
+  background:#0f172a;
+  color:white;
+  line-height:1.6;
+}
 
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
 
-        h2 {
-            border-bottom: 2px solid #38bdf8;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  background:#0f172a;
+  padding:20px 0;
+  z-index:1000;
+  border-bottom:1px solid #1e293b;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
+nav .container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-        .skills span {
-            display: inline-block;
-            background: #38bdf8;
-            color: black;
-            padding: 8px 12px;
-            margin: 5px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #1e293b;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #94a3b8;
-        }
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
 
-        button {
-            background: #38bdf8;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+nav a:hover{
+  color:#38bdf8;
+}
 
-        button:hover {
-            background: #0ea5e9;
-        }
-    </style>
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#0f172a,#1e293b,#0ea5e9);
+  padding:200px 0 140px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:56px;
+  font-weight:800;
+  max-width:900px;
+  margin:auto;
+}
+
+.hero p{
+  font-size:20px;
+  margin-top:25px;
+  color:#cbd5e1;
+}
+
+.buttons{
+  margin-top:40px;
+}
+
+.btn{
+  padding:14px 30px;
+  margin:10px;
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+  transition:0.3s ease;
+}
+
+.btn-primary{
+  background:#38bdf8;
+  color:black;
+}
+
+.btn-secondary{
+  border:1px solid #38bdf8;
+  color:#38bdf8;
+}
+
+.btn:hover{
+  transform:translateY(-6px);
+}
+
+/* SECTION */
+section{
+  padding:100px 0;
+}
+
+h2{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:60px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#1e293b;
+  padding:30px;
+  border-radius:12px;
+  transition:0.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card h3{
+  margin-bottom:15px;
+}
+
+.card p{
+  color:#94a3b8;
+}
+
+/* METRICS */
+.metrics{
+  text-align:center;
+  font-size:22px;
+  color:#38bdf8;
+  margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+  background:#020617;
+  text-align:center;
+  padding:40px;
+  color:#64748b;
+}
+</style>
 </head>
 <body>
 
-<header>
-    <h1>Anjani Kumar</h1>
-    <p>System Engineer | DevOps Learner | Automation Enthusiast</p>
-</header>
+<nav>
+  <div class="container">
+    <h3>Anjani Kumar</h3>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-<section>
+<div class="hero">
+  <div class="container">
+    <h1>DevOps Engineer Who Automates, Scales & Secures Cloud Infrastructure</h1>
+    <p>Reduced deployment effort by 60% using CI/CD automation and containerized workflows.</p>
+
+    <div class="buttons">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="resume.pdf" class="btn btn-secondary">Download Resume</a>
+    </div>
+  </div>
+</div>
+
+<section id="projects">
+  <div class="container">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>CI/CD Automation Pipeline</h3>
+        <p>Docker-based automated build and deployment workflow reducing release cycle time.</p>
+      </div>
+      <div class="card">
+        <h3>Infrastructure as Code</h3>
+        <p>Provisioned scalable cloud environments using declarative configuration principles.</p>
+      </div>
+      <div class="card">
+        <h3>Containerized Web Deployment</h3>
+        <p>NGINX production deployment with improved consistency across environments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="container">
+    <h2>Impact Delivered</h2>
+    <p class="metrics">60% Faster Deployments · Improved Release Stability · Automation-First Mindset</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
     <h2>About Me</h2>
     <div class="card">
-        <p>
-            I am a passionate DevOps learner focused on automation, CI/CD,
-            Linux, Git, Docker and cloud technologies.
-        </p>
+      <p>
+        I design scalable DevOps systems, automate infrastructure, and build reliable
+        CI/CD pipelines. Passionate about cloud-native architecture, automation,
+        and production-ready engineering.
+      </p>
     </div>
+  </div>
 </section>
 
-<section>
-    <h2>Skills</h2>
-    <div class="card skills">
-        <span>Linux</span>
-        <span>Git</span>
-        <span>Docker</span>
-        <span>CI/CD</span>
-        <span>AWS</span>
-        <span>Shell Scripting</span>
-        <span>Python</span>
-    </div>
-</section>
-
-<section>
-    <h2>Projects</h2>
+<section id="contact">
+  <div class="container">
+    <h2>Let's Work Together</h2>
     <div class="card">
-        <h3>NGINX Deployment Project</h3>
-        <p>Deployed a sample app using NGINX with CI/CD pipeline.</p>
-        <button>View Project</button>
+      <p>Email: anjanikumar7973@gmail.com</p>
+      <p>GitHub: github.com/AnjaniKumar7973</p>
+      <p>LinkedIn: linkedin.com/in/anjanikumar7973</p>
     </div>
+  </div>
 </section>
 
 <footer>
-    © 2026 Anjani Kumar | Built with HTML & CSS
+  © 2026 Anjani Kumar | DevOps Engineer
 </footer>
 
 </body>
